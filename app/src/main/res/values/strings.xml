@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DormLink</string>
+    <string name="link">LINK</string>
+    <string name="dorm">DORM</string>
+    <string name="categories">Categories</string>
+    <string name="sunflower_residence">Sunflower Residence</string>
+    <string name="no_231_malabe_colombo">No 231, Malabe, Colombo</string>
+    <string name="rs_36_000_mo">Rs. 36,000 mo</string>
+    <string name="aruna_boarding_house">Aruna Boarding House</string>
+    <string name="no_43_himbutana_colombo">No 43, Himbutana , Colombo</string>
+    <string name="rs_16_000_mo">Rs. 16,000 mo</string>
+    <string name="gate_front_apartment">Gate front Apartment</string>
+    <string name="c_23_gate_front_colombo">C 23, Gate front , Colombo</string>
+    <string name="rs_45_000_mo">Rs. 45,000 mo</string>
+    <string name="rs_28_000_mo">Rs. 28,000 mo</string>
+    <string name="no_53_malabe_colmbo">No 53, Malabe,Colmbo</string>
+    <string name="kalana_residence">Kalana Residence</string>
+
+    <string name="description">
+        Explore the Sunflower Residence Dormitory, your perfect student haven!
+        Featuring a comfortable study room, 3 bedrooms, 2 bathrooms, and a fully equipped kitchen,
+        our space encourages academic achievement and fosters a sense of community.
+        Join us and enhance your student experience!
+    </string>
+</resources>
+
+
+

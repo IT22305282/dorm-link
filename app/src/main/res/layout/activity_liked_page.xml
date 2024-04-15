@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LikedPage">
+
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="768dp"
+        android:layout_marginStart="2dp"
+        android:background="@color/white"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <!--Title & Back button Layout Content-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Recently Liked"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/backbtn_main"
+                    android:layout_width="30dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/backbtn_main"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--CardView Content-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="112dp"
+                        android:layout_height="111dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/recent_house1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="111dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sunflower_residence"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_bold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_location"/>
+
+                            <TextView
+                                android:id="@+id/item4textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter_bold"
+                                android:paddingLeft="5dp"
+                                android:text="@string/no_231_malabe_colombo"
+                                android:textColor="#A9A9A9"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/rs_36_000_mo"
+                            android:fontFamily="@font/inter_bold"
+                            android:paddingTop="5dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="57dp"
+                            android:layout_height="24dp"
+                            android:layout_weight="1"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/rate_item1"/>
+
+                    </LinearLayout>
+
+                    <!--Constrant Layout for small Icons-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/mini_home_icon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/removebtnRec"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/remove"
+                            android:clickable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:fontFamily="@font/inter_bold"
+                android:paddingTop="10dp"/>
+
+            <!--History ScrollView Content-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <!--CardView Content-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="112dp"
+                                android:layout_height="111dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/recent_house2"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="111dp"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                tools:ignore="RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/aruna_boarding_house"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/inter_bold"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_location"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:paddingLeft="5dp"
+                                        android:text="No 43 Himbutana"
+                                        android:textColor="#A9A9A9"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:text="@string/rs_16_000_mo"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageView
+                                    android:layout_width="57dp"
+                                    android:layout_height="24dp"
+                                    android:layout_weight="1"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/rate_item1"/>
+
+                            </LinearLayout>
+
+                            <!--Constrant Layout for small Icons-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/mini_home_icon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/removebtn1"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/remove"
+                                    android:clickable="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--CardView Content-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="112dp"
+                                android:layout_height="111dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/recent_house3"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="111dp"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                tools:ignore="RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gate_front_apartment"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/inter_bold"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_location"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:paddingLeft="5dp"
+                                        android:text="C 23 Gate front"
+                                        android:textColor="#A9A9A9"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:text="@string/rs_45_000_mo"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageView
+                                    android:layout_width="57dp"
+                                    android:layout_height="24dp"
+                                    android:layout_weight="1"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/rate_item1"/>
+
+                            </LinearLayout>
+
+                            <!--Constrant Layout for small Icons-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/mini_home_icon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/removebtn2"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/remove"
+                                    android:clickable="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--CardView Content-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="112dp"
+                                android:layout_height="111dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/recent_house4"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="111dp"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                tools:ignore="RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kalana_residence"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/inter_bold"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_location"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:paddingLeft="5dp"
+                                        android:text="@string/no_53_malabe_colmbo"
+                                        android:textColor="#A9A9A9"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:text="@string/rs_28_000_mo"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageView
+                                    android:layout_width="57dp"
+                                    android:layout_height="24dp"
+                                    android:layout_weight="1"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/rate_item1"/>
+
+                            </LinearLayout>
+
+                            <!--Constrant Layout for small Icons-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/mini_home_icon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/removebtn3"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/remove"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--CardView Content-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="112dp"
+                                android:layout_height="111dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/recent_house1"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="111dp"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                tools:ignore="RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sunflower_residence"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/inter_bold"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_location"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:paddingLeft="5dp"
+                                        android:text="No 231,Malabe"
+                                        android:textColor="#A9A9A9"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:text="@string/rs_36_000_mo"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageView
+                                    android:layout_width="57dp"
+                                    android:layout_height="24dp"
+                                    android:layout_weight="1"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/rate_item1"/>
+
+                            </LinearLayout>
+
+                            <!--Constrant Layout for small Icons-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/mini_home_icon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/removebtn4"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/remove"
+                                    android:clickable="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--CardView Content-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="5dp"
+                        android:layout_marginBottom="100dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="112dp"
+                                android:layout_height="111dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/recent_house3"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="111dp"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                tools:ignore="RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/gate_front_apartment"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/inter_bold"/>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:src="@drawable/ic_location"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/inter_bold"
+                                        android:paddingLeft="5dp"
+                                        android:text="C 23 Gate front"
+                                        android:textColor="#A9A9A9"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:text="@string/rs_45_000_mo"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:paddingTop="5dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageView
+                                    android:layout_width="57dp"
+                                    android:layout_height="24dp"
+                                    android:layout_weight="1"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/rate_item1"/>
+
+                            </LinearLayout>
+
+                            <!--Constrant Layout for small Icons-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="26dp"
+                                    android:src="@drawable/mini_home_icon"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/removebtn5"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:src="@drawable/remove"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Bottom Menu Content -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_menu"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/homebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/home_icon"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/profilebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/profile_icon"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/locationbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/location_icon"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/likedbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/liked_icon_c"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
